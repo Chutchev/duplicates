@@ -20,17 +20,12 @@ def fill_list_duplicates(path):
 
 
 def find_duplicates(dups):
-    print(dups)
     dupl = []
-    dupl_files = []
     i = 0
     for filename in dups.keys():
-        if dups[filename]["md5"] == dups[filename]["md5"]:
-            dupl_files.append(dups[filename]["path"])
-            dupl_files.append(dups[filename]["path"])
-        else:
-            dupl.append(dupl_files)
-    print(dupl)
+        md5_hash = dups[filename]["md5"]
+        
+
 def main():
     #path = sys.argv[1]
     find_duplicates(fill_list_duplicates("C:\\Users\\Ivan\\Desktop\\ИВТ-16"))
