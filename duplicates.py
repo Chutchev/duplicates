@@ -30,7 +30,7 @@ def find_duplicates(dups):
             if dups[i]['md5'] == dups[j]['md5'] and dups[i]['path'] != dups[j]['path']:
                 dupl[dups[i]['path']] = {'duplicates': dups[j]['path']}
     for filename in dupl.keys():
-        with open(os.path.abspath("dublicdate.txt"), "a") as dublicates_txt:
+        with open(os.path.abspath("duplicdates.txt"), "a") as dublicates_txt:
             dublicates_txt.write(f"{filename}: {dupl[filename]['duplicates']}\n")
 
 
