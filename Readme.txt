@@ -1,2 +1,3 @@
-Пример запуска:  python duplicates.py C:\\Photo
-Адреса дубликатов будут выведены в файл Duplicates.txt
+Usage Example:  python duplicates.py C:\\Photo
+
+Duplicate addresses will be output to a file: Duplicates.txt
