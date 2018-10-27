@@ -1,6 +1,8 @@
 import hashlib
 import os
 import sys
+import time
+
 
 def read_hash(filename):
     with open(filename, 'rb') as file:
@@ -28,13 +30,15 @@ def find_duplicates(dups):
             if dups[i]['md5'] == dups[j]['md5'] and dups[i]['path'] != dups[j]['path']:
                 dupl[dups[i]['path']] = {'duplicates': dups[j]['path']}
     for filename in dupl.keys():
-        with open(os.path.abspath("Dublicates.txt"), "a") as dublicates_txt:
+        with open(os.path.abspath("dublicdate.txt"), "a") as dublicates_txt:
             dublicates_txt.write(f"{filename}: {dupl[filename]['duplicates']}\n")
 
 
 def main():
     path = sys.argv[1]
+    start_time = time.time()
     find_duplicates(fill_list_duplicates(path))
+    print(f"Сделано за {time.time()-start_time}")
 
 
 if __name__ == '__main__':
